@@ -6,7 +6,7 @@ function App() {
     <>
       <h1 className="my-8 text-center text-4xl underline">🪣 List 👩🏾‍💻</h1>
 
-      <main className="container mx-auto flex flex-col items-center gap-y-10 divide-y-2">
+       <main className="container mx-auto flex flex-col items-center gap-y-10 divide-y">
         <Form />
         <ul className="space-y-6 py-8">
           <Bucket bucket={{ id: "1", text: "Learn React", importance: 1 }} />
