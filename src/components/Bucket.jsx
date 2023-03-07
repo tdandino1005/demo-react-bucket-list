@@ -6,7 +6,15 @@ export default function Bucket({ bucket }) {
     <li
       className={`list-none space-x-2 ${bucket.isCompleted && "line-through"}`}
     >
-      <span>{bucket.text}</span>
+      <label htmlFor={bucket.id} className="font-medium">
+        <input
+          type="checkbox"
+          id={bucket.id}
+          className="mr-2"
+          defaultChecked={bucket.isCompleted}
+        />
+        {bucket.text}
+      </label>
       <Button text="Edit" colorClass="bg-orange-500" />
       <Button text="🔥" colorClass="bg-red-500" />
     </li>
