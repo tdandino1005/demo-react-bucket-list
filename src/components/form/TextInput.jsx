@@ -1,15 +1,23 @@
 import PropTypes from "prop-types";
 
-export default function TextInput({ id, label }) {
+export default function TextInput({ id, label, placeholder }) {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
-      <input type="text" id={id} />
+      <label htmlFor={id} className="sr-only">
+        {label}
+      </label>
+      <input
+        type="text"
+        id={id}
+        placeholder={placeholder}
+        className="rounded"
+      />
     </div>
   );
 }
 
 TextInput.propTypes = {
-  label: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
 };

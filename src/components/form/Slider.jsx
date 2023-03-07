@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 // Uncontrolled component
 export default function Slider({ id, label, min, max }) {
   return (
-    <div>
-      <label htmlFor={id}>{label}</label>
-      <input type="range" min={min} max={max} id={id} />
+    <div className="flex items-center">
+      <label htmlFor={id} className="mr-2">
+        {label}
+      </label>
+      <input type="range" min={min} max={max} id={id} defaultValue={min} />
     </div>
   );
 }

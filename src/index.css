@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+  }
+
+  .low {
+    @apply gradient-text bg-gradient-to-r from-blue-400 to-blue-500;
+  }
+
+  .medium {
+    @apply gradient-text bg-gradient-to-r from-yellow-400 to-yellow-500;
+  }
+
+  .high {
+    @apply gradient-text bg-gradient-to-r from-red-400 to-red-500;
+  }
+}
