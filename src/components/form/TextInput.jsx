@@ -10,7 +10,7 @@ export default function TextInput({ id, label, placeholder }) {
         type="text"
         id={id}
         placeholder={placeholder}
-        className="rounded"
+        className="rounded bg-gray-800 text-gray-200"
       />
     </div>
   );
